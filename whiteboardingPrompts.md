@@ -356,7 +356,7 @@ function bubbleSort(arr) {
   }
   return arr;
 }
-console.log(bubbleSort(9, 2, 7, 12));
+console.log(bubbleSort([9, 2, 7, 12]));
 ```
 
 Output: [2, 7, 9, 12]
