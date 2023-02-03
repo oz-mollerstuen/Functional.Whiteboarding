@@ -374,8 +374,7 @@ Output: [2, 7, 9, 12]
 ## Bubble sort is a simple sorting algorithm that works by repeatedly swapping adjacent elements if they are in the wrong order until the list is sorted in the desired order. The algorithm iterates through the list, comparing each pair of adjacent elements, and swapping them if they are in the wrong order. The process is repeated until no more swaps are necessary, indicating that the list is now sorted. Bubble sort has a worst-case time complexity of O(n^2), making it inefficient for large lists, but it is easy to understand and implement.
 #
 # Edge Cases:
-* The input argument should be an array. This edge case would throw a type error since the argument passed is not of type array.
-#
+* ?
 
 
 
