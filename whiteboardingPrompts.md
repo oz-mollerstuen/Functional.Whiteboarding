@@ -116,6 +116,8 @@ console.log(removeDuplicates(7, 9, "hi", 12, "hi", 7, 53))
 
 Output: [7, 9, "hi", 12, 53]
 #
+* The indexOf() method returns the position of the first occurrence of a value in a string. The indexOf() method returns -1 if the value is not found.
+#
 ##### This function removeDuplicates takes in an array arr as a parameter. It initializes an empty array uniqueArray to store unique elements of the given array arr. The function uses a for loop that iterates through the elements of the arr array.
 
 ##### In each iteration, the function checks if the current element arr[i] is present in the uniqueArray using the indexOf method. If it returns -1, it means that the element is not present in the uniqueArray, and the function pushes it to the uniqueArray.
