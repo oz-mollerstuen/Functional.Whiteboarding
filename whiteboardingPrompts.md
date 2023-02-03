@@ -120,6 +120,17 @@ Output: [7, 9, "hi", 12, 53]
 
 ##### Finally, the function returns the uniqueArray which will contain all the unique elements of the given arr array.
 #
+
+# Some of the edge cases to consider while testing the removeDuplicates function are:
+
+* Input array of different data types: The function should handle arrays that contain elements of different data types like numbers, strings, objects, etc.
+
+* Input array of different case sensitivity: The function should handle arrays that contain elements with different case sensitivity. For example, "Hi" and "hi".
+
+* Input array length: The function should handle arrays of different lengths including arrays with 0 or 1 elements.
+
+* Input of non-array data type: The function should handle cases where the input is not an array but some other data type like a string, number, etc.
+#
 # With Recursion:
 
 ```
@@ -148,6 +159,15 @@ Output: [7, 9, "hi", 12, 53]
 
 ##### The code also includes a console.log statement that calls the removeDuplicates function with the input array [7, 9, "hi", 12, "hi", 7, 53].
 #
+
+# The edge cases to consider for this implementation of removing duplicates from an array could include:
+
+* Handling of non-primitive data types: The implementation assumes that only primitive data types are present in the input array, but this might not always be the case. It could lead to unexpected results if the input array contains complex data structures like objects or arrays.
+
+* Handling of arrays with no duplicates: The implementation is written to handle arrays with duplicates. But if the input array has no duplicates, it might result in performance overhead as the implementation still goes through the array and checks for duplicates.
+
+* Handling of empty arrays: If the input array is empty, the implementation returns an empty array which might not be what is expected in some cases. It is important to handle such cases and return an appropriate result.
+#
 ## Using a filter:
 #
 ```
@@ -165,7 +185,19 @@ Output: [7, 9, "hi", 12, 53]
 ##### The condition arr.indexOf(item) === index checks if the current item is the first occurrence of the item in the input array arr. If it is, then the item is unique, and the filter method includes it in the result array.
 
 ##### Finally, the function returns the result array containing only the unique elements of the input array arr.
+#
+# Edge cases to consider:
 
+* Input with empty array: removeDuplicates([]) - The function should handle the input of an empty array and return an empty array.
+
+* Input with non-unique elements only: removeDuplicates([1, 1, 1, 1, 1]) - The function should return a unique array with only one occurrence of the same element.
+
+* Input with different data types: removeDuplicates([1, "hi", [], {}, null, undefined, 1, "hi"]) - The function should handle different data types and return an array of unique elements.
+
+* Input with multiple occurrences of null and undefined: removeDuplicates([null, undefined, null, undefined]) - The function should handle multiple occurrences of null and undefined and return an array with only one occurrence of each.
+
+* Input with complex data structures: removeDuplicates([[1, 2, 3], [1, 2, 3], {a: 1, b: 2}, {a: 1, b: 2}]) - The function should handle complex data structures and return an array of unique elements.
+#
 # Problem 3: Compressing Strings
 
 ## Write an algorithm that takes a string with repeated characters and compresses them, using a number to show how many times the repeated character has been compressed. For instance, aaa would be written as 3a. Solve the problem with and without recursion.
@@ -176,6 +208,7 @@ Output: [7, 9, "hi", 12, 53]
 ## Output: "3ab2c4da"
 
 #
+
 ## Without Recursion:
 #
 ```
@@ -204,6 +237,12 @@ Output: "3ab2c4da"
 ##### The function then loops through each character of the input string str. If the current character is the same as the next character, the count is incremented. If the current character is different than the next character, the count and current character are added to the result string. The count is then reset to 1.
 
 ##### Once all the characters have been processed, the compressed string result is returned. The function also includes a console log statement to print the result of the compression of the string "aaabccdddda".
+#
+#  Edge case considerations:
+* What happens if the input string is empty or contains only one character? In this case, the function will return an empty string, or the single character input, respectively, which may not be the expected outcome.
+
+* What happens if the input string contains non-alphabetic characters? The function will still try to compress the string, but the resulting compressed string may contain characters that are not letters, which may not be suitable for some applications.
+
 #
 # With Recursion:
 
@@ -234,6 +273,14 @@ Output: "3ab2c4da"
 ##### Finally, the function calls itself with the updated values of index and result, until the base case is reached.
 
 ##### The function returns the compressed string.
+#
+# Here are a few edge cases that you can test with this function:
+* An empty string: the function should return an empty string as the result.
+
+* A string with a single character: the function should return the character as the result, with no count
+* A string with all different characters: the function should return the original string as the result.
+
+#
 
 
 # Problem 4: Checking for Uniqueness
@@ -270,6 +317,13 @@ Output: false
 
 ##### For example, in console.log(isUnique("hello")), the function returns false because the string "hello" has duplicate characters.
 
+#
+# Edge cases to consider:
+* Input string with special characters, numbers, and symbols, to see how the function handles these characters.
+* Input string with an empty string, to see if the function returns an ppropriate result.
+ Input string with multiple spaces, to see if the function handles multiple spaces correctly.
+
+#
 # Problem 5: Array Sorting
 
 # Write an algorithm that sorts an array without using the sort() method. There are many different sorting algorithms — take the time to read about the following:
@@ -321,3 +375,11 @@ Output: [2, 7, 9, 12]
 ##### Finally, the sorted array is returned.
 
 ## Bubble sort is a simple sorting algorithm that works by repeatedly swapping adjacent elements if they are in the wrong order until the list is sorted in the desired order. The algorithm iterates through the list, comparing each pair of adjacent elements, and swapping them if they are in the wrong order. The process is repeated until no more swaps are necessary, indicating that the list is now sorted. Bubble sort has a worst-case time complexity of O(n^2), making it inefficient for large lists, but it is easy to understand and implement.
+#
+# Edge Cases:
+* The input argument should be an array. This edge case would throw a type error since the argument passed is not of type array.
+#
+
+
+
+
