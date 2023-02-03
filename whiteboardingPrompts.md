@@ -38,6 +38,18 @@ Output: "Jasmine%20Ann%20Jones"
 
 ##### Finally, the function is being invoked with an argument of "Jasmine Ann Jones" and logged to the console.
 
+# Edge cases to consider for the function loopThis:
+
+* Input string with no spaces: The function would work as expected and return the input string as is, without any modifications.
+
+* Input string with multiple spaces: The function replaces each space with %20 which might not be desired in cases where multiple spaces are required.
+
+* Input string with spaces at the beginning or end: The function replaces the spaces at the beginning or end of the string, which might not be desired in cases where the spaces are important.
+
+* Input string with special characters: The function might not handle special characters properly, and they may get lost during the conversion process.
+
+* Input string with non-printable characters: The function may not handle non-printable characters correctly, and they may get lost during the conversion process.
+#
 ## With Recursion:
 ```
 function replaceSpaces(url, index = 0, stringArr = []) {
@@ -68,7 +80,14 @@ Output: "Jasmine%20Ann%20Jones"
 ##### Otherwise, the function checks if the current character in the URL string is a space. If it is, %20 is pushed into the stringArr. If not, the character itself is pushed into the stringArr.
 
 ##### The function then calls itself with index + 1, updating the index to process the next character in the URL string and passes the updated stringArr as a parameter. This continues until the end of the URL string is reached and the final result is returned.
-
+#
+# Edge Cases:
+* Case with empty string: replaceSpaces("")
+* Case with only spaces: replaceSpaces(" ")
+* Case with special characters: replaceSpaces("Jasmine@Ann!Jones")
+* Case with multi-byte characters: replaceSpaces("Jasmine 你好 Ann Jones")
+* Case with leading/trailing spaces: replaceSpaces(" Jasmine Ann Jones ")
+#
 
 # Problem 2: Array Deduping
 
