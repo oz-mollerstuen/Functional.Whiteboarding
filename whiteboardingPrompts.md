@@ -118,6 +118,8 @@ Output: [7, 9, "hi", 12, 53]
 #
 * The indexOf() method returns the position of the first occurrence of a value in a string. The indexOf() method returns -1 if the value is not found.
 #
+* This code checks if the current item in the original arr exists in the uniqueArray. If it does not, then the item is pushed into the uniqueArray using uniqueArray.push(arr[i]). The purpose of this code is to create a new array of unique elements from the original arr. The indexOf method returns the first index of an item in an array or -1 if the item is not found. So, uniqueArray.indexOf(arr[i]) === -1 is true when the item in arr[i] is not in uniqueArray, which means it is unique, and should be added to uniqueArray.
+#
 ##### This function removeDuplicates takes in an array arr as a parameter. It initializes an empty array uniqueArray to store unique elements of the given array arr. The function uses a for loop that iterates through the elements of the arr array.
 
 ##### In each iteration, the function checks if the current element arr[i] is present in the uniqueArray using the indexOf method. If it returns -1, it means that the element is not present in the uniqueArray, and the function pushes it to the uniqueArray.
