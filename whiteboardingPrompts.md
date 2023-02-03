@@ -46,9 +46,6 @@ Output: "Jasmine%20Ann%20Jones"
 
 * Input string with spaces at the beginning or end: The function replaces the spaces at the beginning or end of the string, which might not be desired in cases where the spaces are important.
 
-* Input string with special characters: The function might not handle special characters properly, and they may get lost during the conversion process.
-
-* Input string with non-printable characters: The function may not handle non-printable characters correctly, and they may get lost during the conversion process.
 #
 ## With Recursion:
 ```
@@ -84,10 +81,7 @@ Output: "Jasmine%20Ann%20Jones"
 # Edge Cases:
 * Case with empty string: replaceSpaces("")
 * Case with only spaces: replaceSpaces(" ")
-* Case with special characters: replaceSpaces("Jasmine@Ann!Jones")
-* Case with multi-byte characters: replaceSpaces("Jasmine 你好 Ann Jones")
-* Case with leading/trailing spaces: replaceSpaces(" Jasmine Ann Jones ")
-#
+* Case with special characters: replaceSpaces("Jasmine@Ann!Jones")#
 
 # Problem 2: Array Deduping
 
@@ -129,8 +123,6 @@ Output: [7, 9, "hi", 12, 53]
 
 * Input array length: The function should handle arrays of different lengths including arrays with 0 or 1 elements.
 
-* Input of non-array data type: The function should handle cases where the input is not an array but some other data type like a string, number, etc.
-#
 # With Recursion:
 
 ```
@@ -162,13 +154,10 @@ Output: [7, 9, "hi", 12, 53]
 
 # The edge cases to consider for this implementation of removing duplicates from an array could include:
 
-* Handling of non-primitive data types: The implementation assumes that only primitive data types are present in the input array, but this might not always be the case. It could lead to unexpected results if the input array contains complex data structures like objects or arrays.
-
 * Handling of arrays with no duplicates: The implementation is written to handle arrays with duplicates. But if the input array has no duplicates, it might result in performance overhead as the implementation still goes through the array and checks for duplicates.
 
-* Handling of empty arrays: If the input array is empty, the implementation returns an empty array which might not be what is expected in some cases. It is important to handle such cases and return an appropriate result.
-#
-## Using a filter:
+* Handling of empty arrays: If the input array is empty, the implementation returns an empty array which might not be what is expected in some cases. It is important to handle such cases and return an appropriate result
+### Using a filter:
 #
 ```
 function removeDuplicates(arr) {
@@ -192,12 +181,8 @@ Output: [7, 9, "hi", 12, 53]
 
 * Input with non-unique elements only: removeDuplicates([1, 1, 1, 1, 1]) - The function should return a unique array with only one occurrence of the same element.
 
-* Input with different data types: removeDuplicates([1, "hi", [], {}, null, undefined, 1, "hi"]) - The function should handle different data types and return an array of unique elements.
+* Input with multiple occurrences of null and undefined: removeDuplicates([null, undefined, null, undefined]) - The function should handle multiple occurrences f null and undefined and return an array with only one occurrence of each.
 
-* Input with multiple occurrences of null and undefined: removeDuplicates([null, undefined, null, undefined]) - The function should handle multiple occurrences of null and undefined and return an array with only one occurrence of each.
-
-* Input with complex data structures: removeDuplicates([[1, 2, 3], [1, 2, 3], {a: 1, b: 2}, {a: 1, b: 2}]) - The function should handle complex data structures and return an array of unique elements.
-#
 # Problem 3: Compressing Strings
 
 ## Write an algorithm that takes a string with repeated characters and compresses them, using a number to show how many times the repeated character has been compressed. For instance, aaa would be written as 3a. Solve the problem with and without recursion.
