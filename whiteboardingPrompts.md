@@ -1,3 +1,5 @@
+![lucas](https://user-images.githubusercontent.com/115112679/216680966-cb4ae1e9-5838-48d5-9fcb-a4d0358335c3.jpeg)
+
 # Problem 1: Turning Strings to URLs
 
 ## Without Recursion:
