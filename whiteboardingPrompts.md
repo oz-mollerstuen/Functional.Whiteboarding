@@ -35,7 +35,7 @@ function replaceSpaces(url, index = 0, stringArr = []) {
 }
 
 const result = replaceSpaces('Jasmine Ann Jones');
-console.log(result("Jasmine Ann Jones"));
+console.log(result);
 ```
 Output: "Jasmine%20Ann%20Jones"
 
@@ -56,6 +56,10 @@ console.log(removeDuplicates(7, 9, "hi", 12, "hi", 7, 53))
 ```
 
 Output: [7, 9, "hi", 12, 53]
+
+#### The -1 in uniqueArray.indexOf(arr[index]) === -1 is used to check if the current element in the input array arr at index index does not exist in the uniqueArray.
+
+#### The indexOf() method returns the first index at which the specified element can be found in the array, or -1 if it is not present. So, if uniqueArray.indexOf(arr[index]) returns -1, it means that the current element arr[index] is not in the uniqueArray, and it can be added to uniqueArray by uniqueArray.push(arr[index]).
 
 ## With Recursion:
 
