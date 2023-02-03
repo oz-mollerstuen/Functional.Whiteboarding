@@ -78,6 +78,14 @@ Output: "Jasmine%20Ann%20Jones"
 
 ##### The function then calls itself with index + 1, updating the index to process the next character in the URL string and passes the updated stringArr as a parameter. This continues until the end of the URL string is reached and the final result is returned.
 #
+The replaceSpaces function takes 3 arguments:
+
+* url: a string representing the URL to be modified. This is the input that the function will process.
+
+* index: an optional integer argument representing the index of the character in the url string that needs to be processed. The default value is 0, which means that if this argument is not passed, the function will start processing the string from the first character.
+
+* stringArr: an optional array argument representing the modified URL string, with spaces replaced with %20. The default value is an empty array, which means that if this argument is not passed, the function will start processing the string with an empty array to store the modified string.
+#
 # Edge Cases:
 * Case with empty string: replaceSpaces("")
 * Case with only spaces: replaceSpaces(" ")
